@@ -8,19 +8,19 @@
 
 function calculate() {
   // input
-  const age = document.getElementById("age").value
-  const tuesday = document.getElementById("tuesday").value
-  const thursday = document.getElementById("thursday").value
+  const age = document.getElementById("age").value;
+  const tuesday = document.getElementById("tuesday").checked;
+  const thursday = document.getElementById("thursday").checked;
 
   // process
-  if (tuesday || thursday || (age >= 12 && age <21)) {
+    if (tuesday || thursday || (age > 12 && age <21)) {
     // output
     document.getElementById("results").innerHTML =
-      "You can recieve a student discount."
+      "<p>You can recieve a student discount.</p>";
   }
 
   else {
     document.getElementById("results").innerHTML =
-      "You have to pay regular price."
+      "<p>You have to pay regular price.</p>";
   }
 }
