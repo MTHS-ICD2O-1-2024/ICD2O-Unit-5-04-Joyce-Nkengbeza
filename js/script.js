@@ -8,27 +8,19 @@
 
 function calculate() {
   // input
-  const movieRating = document.getElementById("movieforage").value
+  const age = document.getElementById("age").value
+  const tuesday = document.getElementById("tuesday").value
+  const thursday = document.getElementById("thursday").value
 
   // process
-  if (movieRating >= 17) {
+  if (tuesday || thursday || (age >= 12 && age <21)) {
     // output
     document.getElementById("results").innerHTML =
-      "You can see R rated movies."
-  }
-
-  else if (movieRating >= 13) {
-    document.getElementById("results").innerHTML =
-      "You can see PG-13 rated movies."
-  }
-
-  else if (movieRating >= 5) {
-    document.getElementById("results").innerHTML =
-      "You can see G and PG rated movies."
+      "You can recieve a student discount."
   }
 
   else {
     document.getElementById("results").innerHTML =
-      "Uhh, you are to young to see most things."
+      "You have to pay regular price."
   }
 }
