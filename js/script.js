@@ -13,7 +13,7 @@ function calculate() {
   const thursday = document.getElementById("thursday").checked;
 
   // process
-    if (tuesday || thursday || (age > 12 && age <21)) {
+    if (tuesday || thursday || (age >= 12 && age <=21)) {
     // output
     document.getElementById("results").innerHTML =
       "<p>You can recieve a student discount.</p>";
