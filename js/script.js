@@ -8,11 +8,11 @@
 
 function calculate() {
   // input
-  const age = document.getElementById("age").value;
-  const day = document.getElementById("day").checked;
+  const age = (document.getElementById("age").value);
+  const day = document.querySelector('input[name="day"]:checked').value;
 
   // process
-    if ( day == 3 || day == 5 || (age >= 12 && age <=21)) {
+    if ( day == "tuesday" || day == "thursday" || (age >= 12 && age <=21)) {
     // output
     document.getElementById("results").innerHTML =
       "<p>You can recieve a student discount.</p>";
